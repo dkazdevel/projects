@@ -1,0 +1,15 @@
+<div class="info_part__concerts-container">
+<h1 class="info_part__concerts-container__h1">Upcoming concerts:</h1>
+  {{#each concerts}}
+    <div class="info_part__concerts-container__concert-block">
+      <h2 class="info_part__concerts-container__concert-block__title">{{this.title}}</h2>
+      <div class="info_part__concerts-container__concert-block__place-date">
+        <h3 class="info_part__concerts-container__concert-block__place">{{this.place}}</h3>
+        <h3 class="info_part__concerts-container__concert-block__date">{{this.date}}</h3>
+      </div>
+      <p class="info_part__concerts-container__concert-block__description">{{this.description}}</p>
+      <a href="#/concerts/{{this.id}}"class="info_part__concerts-container__concert-block__link">Choose</a>
+      <img class="info_part__concerts-container__concert-block__img" src="{{this.imgUrl}}" alt="photo">
+    </div>
+  {{/each}}
+</div>

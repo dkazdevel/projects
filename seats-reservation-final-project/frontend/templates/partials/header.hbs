@@ -1,0 +1,35 @@
+<div class="header">
+  <a href="#" class="header__logo">
+    <img src="img/logo.png" alt="logo">
+  </a>
+  {{#if (isMain requestData.resource)}}
+    <a href="#/concerts" class="header__concert_button1">
+      Choose a concert
+    </a>
+  {{else}}
+    {{#if (isList requestData)}}
+      <a href="#" class="header__concert_button1">
+        Main
+      </a>
+      {{else}}
+
+      {{#if (isConcertBooking requestData)}}
+        <a href="#/concerts" class="header__concert_button1">
+          To the list
+        </a>
+      {{else}}
+      {{#if (isOrderForm requestData)}}
+        <a href="#/concerts" class="header__concert_button1 button-to-main">
+          To the list
+        </a>
+        <a href="#/concerts/{{requestData.concertId}}" class="header__concert_button1 header-block-right-margin">
+          To the concert
+        </a>
+      {{/if}}
+    {{/if}}
+  {{/if}}
+{{/if}}
+  <div class="header__tel_number">
+    +48 555 55 55
+  </div>
+</div>

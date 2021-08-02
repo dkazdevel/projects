@@ -1,0 +1,863 @@
+@import "reset";
+
+@font-face {
+    font-family: "Centure_Gothic_bold";
+    src: url("../fonts/centure.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Century_Gothic_Regular";
+    src: url("../fonts/CenturyGothicRegular.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Century_Gothic_italic";
+    src: url("../fonts/CenturyGothicitalic.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+html {
+  min-width: 500px;
+  height:100%;
+}
+
+body {
+  min-height:100%;
+  position: relative;
+  background-color: #1c1c1c;
+}
+
+.header {
+  width:100%;
+  height:75px;
+  position: fixed;
+  background-color: #1c1c1c;
+  z-index: 10;
+  box-shadow:0 5px 40px rgba(0, 0, 0, 0.5);
+
+  &__logo {
+    margin-top: 5px;
+    margin-left: 90px;
+    float: left;
+
+    img {
+      width:125px;
+    }
+  }
+
+  &__tel_number {
+    float: right;
+    color: #fff;
+    font-family: "Century_Gothic_Regular";
+    font-size: 18px;
+    margin-right: 25px;
+    margin-top: 25px
+  }
+
+  &__concert_button1 {
+    font-family: "Centure_Gothic_bold";
+    color: #e1e1e1;
+    font-size: 18.46px;
+    float: right;
+    margin-top: 11px;
+    margin-right: 83px;
+    padding: 12px 35px 12px 35px;
+    transition: .3s;
+    border: 2px solid #68217a;
+    cursor: pointer;
+    letter-spacing: .7px;
+    text-decoration: none;
+
+    &:hover {
+      border: 2px solid #ffffff;
+      transition: .3s;
+    }
+  }
+
+  .header-block-right-margin {
+    margin-right: 20px;
+  }
+}
+
+.info_part {
+  padding-bottom: 200px;
+  overflow: hidden;
+  position: relative;
+  background-color: #1c1c1c;
+
+  .page-title{
+    color:white;
+    font-family: "Centure_Gothic_bold";
+    font-size: 30px;
+    line-height: 1.3;
+    margin-top: 100px;
+    margin-left: 30px;
+  }
+
+  &__concerts-container {
+    width:80%;
+    margin:120px auto;
+
+    &__admin-log-out-button {
+      display: block;
+      text-align: center;
+      width:150px;
+      margin: 0 auto 20px;
+      font-family: "Centure_Gothic_bold";
+      color: #e1e1e1;
+      font-size: 18.46px;
+      padding: 12px 35px 12px 35px;
+      transition: 0.3s;
+      border: 2px solid #68217a;
+      cursor: pointer;
+      letter-spacing: 0.7px;
+      text-decoration: none;
+
+      &:hover {
+        border: 2px solid #ffffff;
+        transition: .3s;
+      }
+    }
+
+    &__button-mobile {
+      text-align: center;
+      display: none;
+      margin: 0 auto 20px;
+      font-family: "Centure_Gothic_bold";
+      color: #e1e1e1;
+      font-size: 18.46px;
+      padding: 12px 35px 12px 35px;
+      transition: 0.3s;
+      border: 2px solid #68217a;
+      cursor: pointer;
+      letter-spacing: 0.7px;
+      text-decoration: none;
+
+      &:hover {
+        border: 2px solid #ffffff;
+        transition: .3s;
+      }
+    }
+
+    &__button-to-concerts-list {
+      display: block;
+      text-align: center;
+      width:40%;
+      margin: 0 auto 20px;
+      font-family: "Centure_Gothic_bold";
+      color: #e1e1e1;
+      font-size: 18.46px;
+      padding: 12px 35px 12px 35px;
+      transition: 0.3s;
+      border: 2px solid #68217a;
+      cursor: pointer;
+      letter-spacing: 0.7px;
+      text-decoration: none;
+
+      &:hover {
+        border: 2px solid #ffffff;
+        transition: .3s;
+      }
+    }
+
+    &__h1 {
+      color:white;
+      font-family: "Centure_Gothic_bold";
+      font-size: 40px;
+      line-height: 1.3;
+      margin-bottom: 50px;
+    }
+
+    &__h1-concert-book {
+      width:49%;
+      display:inline-block;
+      vertical-align: top;
+      color:white;
+      font-family: "Centure_Gothic_bold";
+      font-size: 50px;
+      line-height: 1.3;
+      margin-bottom: 50px;
+      letter-spacing: .7px;
+    }
+
+    &__booking-choose-block {
+      display: inline-block;
+      vertical-align: top;
+      width:59%;
+      padding: 20px 0px;
+      box-shadow:0 5px 10px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      font-family: "Century_Gothic_italic";
+      font-size: 15px;
+      color:white;
+      letter-spacing: .7px;
+
+
+      h2 {
+        margin: 0px auto;
+        font-family: "Century_Gothic_italic";
+        font-size: 15px;
+      }
+
+      &__danceFloor {
+        width:25%;
+        border: 2px solid white;
+        margin: 20px auto;
+        padding: 13% 20%;
+        cursor: pointer;
+        background-color: rgba(32, 53, 36, .8);
+        transition: .5s;
+      }
+      .booked {
+        background-color: rgba(134, 20, 20, .5);
+      }
+
+      .choosed {
+        background-color: #1c1c1c;
+        transition: .5s;
+      }
+
+      &__tableSeats {
+        width:83%;
+        margin: 0px auto;
+
+        &__block {
+          display: inline-block;
+          vertical-align: top;
+          width:9%;
+          padding: 4% 6%;
+          margin-top: 20px;
+          border: 2px solid white;
+          cursor: pointer;
+          background-color: rgba(32, 53, 36, .8);
+          transition: .5s;
+        }
+
+        .choosed {
+          background-color: #1c1c1c;
+          transition: .5s;
+        }
+      }
+    }
+
+    &__booking-form-block {
+      display: inline-block;
+      vertical-align: top;
+      width:35%;
+      margin-left: 3%;
+      min-height:200px;
+      box-shadow:0 5px 10px rgba(0, 0, 0, 0.5);
+      text-align: center;
+
+      &__h1 {
+        color:white;
+        font-family: "Centure_Gothic_bold";
+        font-size: 20px;
+        line-height: 1.3;
+        margin-top: 20px;
+      }
+
+      &__order-info {
+        width:70%;
+        margin: 0px auto;
+        text-align: left;
+        color:white;
+        font-family: "Century_Gothic_Regular";
+        font-size: 16px;
+
+        h2 {
+          padding-top: 20px;
+        }
+
+        &__button {
+          font-family: "Centure_Gothic_bold";
+          color: #e1e1e1;
+          font-size: 16px;
+          padding: 5% 10%;
+          transition: 0.3s;
+          border: 2px solid #68217a;
+          cursor: pointer;
+          letter-spacing: 0.7px;
+          text-decoration: none;
+          display: block;
+          width: 105px;
+          text-align: center;
+          margin: 20px auto;
+
+          &:hover {
+            border: 2px solid #ffffff;
+            transition: .3s;
+          }
+        }
+      }
+    }
+
+    &__place-date-book {
+      width:49%;
+      display:inline-block;
+      vertical-align: top;
+      text-align: right;
+      color:white;
+      font-family: "Century_Gothic_Regular";
+      font-size: 24px;
+    }
+
+    &__concert-block {
+      padding: 25px 12px 12px 32px;
+      margin-bottom: 60px;
+      background-color: #262626;
+      box-shadow:0 5px 15px rgba(0, 0, 0, 0.5);
+      color:white;
+      position: relative;
+
+      &__title {
+        width:49%;
+        display: inline-block;
+        vertical-align: top;
+        font-family: "Centure_Gothic_bold";
+        font-size: 30px;
+        margin-bottom: 5px;
+      }
+
+      &__place-date {
+        width:49%;
+        text-align: right;
+        display: inline-block;
+        vertical-align: top;
+
+        h3 {
+          font-family: "Century_Gothic_italic";
+          font-size: 11px;
+          margin-bottom: 5px;
+        }
+      }
+
+      p {
+        display: block;
+        width:50%;
+        margin: 10px auto;
+        font-family: "Century_Gothic_Regular";
+        font-size: 16px;
+        line-height: 1.3;
+      }
+
+      &__link {
+        width: 80px;
+        margin: 25px 0px 30px 20px;
+        padding: 10px 45px 15px 45px;
+        font-family: "Centure_Gothic_bold";
+        font-size: 20px;
+        border: 2px solid #68217a;
+        cursor: pointer;
+        letter-spacing: 0.7px;
+        display: block;
+        transition: .3s;
+        text-decoration: none;
+        color:white;
+
+        &:hover {
+          border: 2px solid #ffffff;
+          transition: .3s;
+        }
+      }
+      &__img {
+        width:200px;
+        position: absolute;
+        bottom:-45px;
+        right:-45px;
+        border: 2px solid #68217a;
+      }
+    }
+
+    &__order-info-container {
+      width:80%;
+      margin: 20px auto;
+      padding: 25px 32px 12px 32px;
+      background-color: #262626;
+      box-shadow:0 5px 15px rgba(0, 0, 0, 0.5);
+      color:white;
+
+      &__buttonToRedirect {
+        font-family: "Centure_Gothic_bold";
+        color: #e1e1e1;
+        font-size: 16px;
+        padding: 2% 10%;
+        transition: 0.3s;
+        background-color: #262626;
+        border: 2px solid #68217a;
+        cursor: pointer;
+        text-align: center;
+        letter-spacing: 0.7px;
+        text-decoration: none;
+        display: block;
+        width: 54%;
+        margin: 20px auto;
+
+        &:hover {
+          border: 2px solid #ffffff;
+          transition: .3s;
+        }
+      }
+
+      &__h2 {
+        font-family: "Century_Gothic_Regular";
+        font-size: 16px;
+        line-height: 1.3;
+        margin-bottom: 20px;
+      }
+
+      &__form {
+        margin-top: 50px;
+
+        &__admin-button-confirm {
+          display: block;
+          text-align: center;
+          width:223px;
+          background-color: #262626;
+          margin: 0 auto 20px;
+          font-family: "Centure_Gothic_bold";
+          color: #e1e1e1;
+          font-size: 18.46px;
+          padding: 12px 35px 12px 35px;
+          transition: 0.3s;
+          border: 2px solid #68217a;
+          cursor: pointer;
+          letter-spacing: 0.7px;
+          text-decoration: none;
+
+          &:hover {
+            border: 2px solid #ffffff;
+            transition: .3s;
+          }
+        }
+
+        label {
+          display: inline-block;
+          vertical-align: top;
+          width:150px;
+          font-family: "Century_Gothic_Regular";
+          font-size: 16px;
+          line-height: 1.3;
+          margin-bottom: 10px;
+        }
+
+        input {
+          width: 250px;
+          display: inline-block;
+          vertical-align: top;
+          background-color: #262626;
+          border: 2px solid #68217a;
+          font-family: "Century_Gothic_Regular";
+          font-size: 16px;
+          color:white;
+          text-align: left;
+          padding-left: 10px;
+          line-height: 1.3;
+          margin-bottom: 20px;
+          text-overflow: ellipsis;
+          outline: none;
+
+          &:-internal-autofill-selected {
+            background-color: #262626!important;
+            color:white!important;
+          }
+        }
+
+        input[id="quantity"] {
+          width:40px;
+        }
+
+        &__button-confirm {
+          font-family: "Centure_Gothic_bold";
+          color: #e1e1e1;
+          font-size: 16px;
+          padding: 12px 53px;
+          transition: 0.3s;
+          background-color: #262626;
+          border: 2px solid #68217a;
+          cursor: pointer;
+          letter-spacing: 0.7px;
+          text-decoration: none;
+          display: block;
+          width: 246px;
+          margin: 20px auto;
+          opacity:30%;
+      }
+
+        .submit-button-active {
+          opacity: 100%;
+
+          &:hover {
+            border: 2px solid #ffffff;
+            transition: .3s;
+          }
+        }
+      }
+    }
+  }
+
+  &__top {
+    height:650px;
+    position: relative;
+    background-color: rgba(8, 29, 37, 1);
+
+    &:before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height:780px;
+      background-image: url(../img/concert01.jpg);
+      opacity: 20%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1;
+    }
+
+    &__text {
+      margin-left: 90px;
+      width:490px;
+      position: absolute;
+      top:150px;
+      z-index: 1;
+
+      h1{
+        color:white;
+        font-family: "Century_Gothic_Regular";
+        font-size: 60px;
+        line-height: 1.3;
+      }
+      .lang_c {
+        color:#68217a;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__form {
+    z-index: 2;
+    color:white;
+    width:34%;
+    height:455px;
+    position: absolute;
+    top:250px;
+    right:60px;
+    background-color: rgba(8, 29, 37, .7);
+    box-shadow: 10px 10px 20px #000;
+    text-align: center;
+    padding-top: 45px;
+    font-family: "Century_Gothic_Regular";
+
+    form fieldset legend {
+      font-size: 24px;
+    }
+
+    form fieldset input {
+      background-color: transparent;
+      border: none;
+      width:65%;
+      padding: 45px 0px 15px 27px;
+      border-bottom: 1px solid white;
+      outline: none;
+      color:white;
+      font-size: 13px;
+    }
+
+    form fieldset h3 {
+      font-size: 14px;
+      padding-top: 35px;
+
+      .number {
+        color:#2e83a3;
+      }
+    }
+
+    &__button_mobile {
+      display:none;
+
+      &:hover {
+        border: 2px solid #ffffff;
+        transition: .3s;
+      }
+    }
+
+    &__buttonsubmit {
+      margin: 28px auto;
+      width:71%;
+      padding: 20px 0px 18px ;
+      color:white;
+      font-family: "Centure_Gothic_bold";
+      letter-spacing: 1px;
+      font-size: 15px;
+      background-color: #68217a;
+      font-weight: bold;
+      box-shadow: 6px 6px 6px #000;
+      cursor:pointer;
+
+      &:hover {
+        font-size: 15px;
+        box-shadow: 3px 3px 3px #000;
+        width: 71.3%;
+      }
+    }
+  }
+}
+
+.info_part2 {
+  background-color: rgba(8, 29, 37, 1);
+  position: relative;
+  height:420px;
+  position: relative;
+
+  &:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:543px;
+    background-color: #1c1c1c;
+    z-index: 1;
+    transform: skewY(-11deg);
+  }
+
+  &__div {
+    font-family: "Century_Gothic_italic";
+    color: white;
+    font-size: 24px;
+    padding: 25px 15px 50px 100px;
+    position: absolute;
+    top: -100px;
+    left:50px;
+    background-color: #1c1c1c;
+    width: 40%;
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+
+    &_h1 {
+      font-family: "Centure_Gothic_bold";
+      padding-bottom: 30px;
+      color:#68217a;
+      font-size: 28px;
+    }
+  }
+
+  &__info {
+    line-height: 1.2;
+  }
+
+  &__button_block {
+    right: calc(50% - 299px/2);
+    z-index: 1;
+    position: absolute;
+    bottom: 4%;
+    height: 70px;
+  }
+
+  &__concert_button2 {
+    background-color: rgba(8, 29, 37, .7);
+    font-family: "Centure_Gothic_bold";
+    color: #e1e1e1;
+    font-size: 24px;
+    margin-top: 11px;
+    padding: 10px 35px 15px 35px;
+    transition: .3s;
+    border: 2px solid #68217a;
+    cursor: pointer;
+    letter-spacing: .7px;
+    text-decoration: none;
+
+    &:hover {
+      border: 2px solid #ffffff;
+      transition: .3s;
+    }
+  }
+}
+.footer-container {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  z-index: 1;
+  border-top: 20px solid #191919;
+}
+
+.footer {
+  height: 190px;
+
+  &__box {
+    width:100%;
+    height:160px;
+    background-color: #0d0d0d;
+
+    &__text {
+      width:78.333%;
+      margin:0px auto;
+      padding-top: 36px;
+
+      &__leftpart {
+        float:left;
+
+        &__name {
+          padding-bottom:13px;
+          color:#00afe9;
+          font-size: 16.7px;
+          font-family: "Centure_Gothic_bold";
+          border-bottom: 1px solid #6f2382;
+
+          &__number {
+            font-family: "Century_Gothic_Regular";
+            color:#ffffff;
+            font-size: 16.7px;
+            padding-top: 14px;
+          }
+        }
+      }
+
+      &__rightpart {
+        float: right;
+        text-align: right;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+@media screen  and (max-width: 962px) {
+  .info_part2__div {
+    font-size: 22px;
+  }
+
+  .info_part__concerts-container__booking-choose-block__tableSeats__block {
+    font-size: 13px;
+  }
+}
+@media screen  and (max-width: 850px) {
+  .header__tel_number {
+    display:none;
+    }
+
+  .info_part2 {
+    min-height: 500px;
+
+    &__info {
+      padding-right: 30px;
+    }
+  }
+}
+
+@media screen  and (max-width: 764px) {
+
+  .header__concert_button1 {
+    font-size: 15px;
+    margin-top: 15px;
+    padding: 12px 25px;
+  }
+
+  .info_part__concerts-container__booking-form-block__h1 {
+    font-size: 17px;
+  }
+
+  .info_part__form {
+    z-index: 2;
+    color: white;
+    width: 380px;
+    height: 455px;
+    position: absolute;
+    top: 320px;
+    right: calc(50% - 380px/2);
+    background-color: rgba(8, 29, 37, .7);
+    box-shadow: 10px 10px 20px #000;
+    text-align: center;
+    padding-top: 45px;
+    font-family: "Century_Gothic_Regular";
+    }
+
+  .info_part2 {
+    min-height: 950px;
+
+    &__div {
+      font-family: "Century_Gothic_italic";
+      color: white;
+      font-size: 24px;
+      padding: 25px 15px 50px 100px;
+      position: absolute;
+      top: 225px;
+      left: calc(50% - 430px / 2);
+      background-color: #1c1c1c;
+      width: 315px;
+      box-shadow: 0 5px 10px rgb(0 0 0 / 50%);
+      z-index: 1;
+    }
+  }
+
+  .info_part__concerts-container__booking-choose-block__tableSeats__block {
+    font-size: 10px;
+  }
+
+  .info_part__concerts-container__booking-form-block__order-info__button {
+    font-size: 13px;
+    width: 111px;
+  }
+
+  .info_part__concerts-container__booking-form-block__order-info h2 {
+    font-size: 14px;
+  }
+}
+
+@media screen  and (max-width: 610px) {
+  .header__logo {
+    width: 125px;
+    margin: 5px auto;
+    float:none;
+    display: block;
+  }
+
+  .header__concert_button1 {
+    display: none;
+  }
+
+  .info_part__concerts-container__button-mobile {
+    display: block;
+  }
+
+  .info_part__top__text {
+    top:110px;
+
+    h1{
+      font-size: 46px;
+    }
+  }
+
+  .info_part__concerts-container {
+    margin: 100px auto;
+  }
+
+  .info_part__form__button_mobile{
+    left: calc(50% - 231px/2);
+    display: block;
+    margin: 0 auto;
+    width: 177px;
+    float: none;
+    position: absolute;
+    top: -70px;
+  }
+
+  .info_part__concerts-container__booking-choose-block__tableSeats__block {
+    font-size: 7px;
+  }
+
+  .info_part__concerts-container__booking-form-block__order-info__button {
+    font-size: 11px;
+    width: 95px;
+  }
+
+  .info_part__concerts-container__booking-form-block__order-info h2 {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,37 @@
+<div class="info_part__concerts-container">
+    <a href="#/concerts/{{activeOrder.concertId}}" class="info_part__concerts-container__button-mobile">
+      Back to the concert
+    </a>
+    <h1 class="info_part__concerts-container__h1">Your booking details</h1>
+    <div class="info_part__concerts-container__order-info-container">
+        <h2 class="info_part__concerts-container__order-info-container__h2">{{activeOrder.concertTitle}}</h2>
+        <h2 class="info_part__concerts-container__order-info-container__h2">{{activeOrder.concertDate}}</h2>
+        <h2 class="info_part__concerts-container__order-info-container__h2">{{activeOrder.concertPlace}}</h2>
+        <h2 class="info_part__concerts-container__order-info-container__h2">Seat type: {{activeOrder.seatType}}</h2>
+        <h2 class="info_part__concerts-container__order-info-container__h2">Price: {{activeOrder.price}}zł</h2>
+        <h2 class="info_part__concerts-container__order-info-container__h2 h2__totalPrice"></h2>
+        {{#if (isDanceFloor activeOrder)}}
+          <form class="info_part__concerts-container__order-info-container__form">
+          <label for="quantity">Quantity:</label>
+          <input id="quantity" type="text">
+          {{else}}
+          <h2 class="info_part__concerts-container__order-info-container__h2">Your table id: {{activeOrder.seatId}}</h2>
+          <form class="info_part__concerts-container__order-info-container__form">
+          <label for="quantity">Quantity:</label>
+          <input value="1" disabled id="quantity" type="text">
+        {{/if}}
+        <br>
+        <label for="userName">Your name:</label>
+        <input id="userName" type="text">
+        <br>
+        <label for="userTel">Your phone number:</label>
+        <input id="userTel" type="text">
+        <br>
+        <label for="userEmail">Email:</label>
+        <input id="userEmail" type="text">
+        <button type="submit" class="info_part__concerts-container__order-info-container__form__button-confirm">
+          Book
+        </button>
+      </form>
+    </div>
+</div>

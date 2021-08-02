@@ -1,0 +1,17 @@
+{
+  "database": {
+    "concertsList": "./database/concertsList.json",
+    "tableSeats": "./database/tableSeats.json",
+    "activeOrder": "./database/activeOrder.json",
+    "confirmedOrders": "./database/confirmedOrders.json",
+    "adminSession": "./database/adminSession.json"
+  },
+
+  "routes": {
+    "concertsList": "./routes/concertsList.js",
+    "activeOrder": "./routes/activeOrder.js",
+    "confirmedOrders": "./routes/confirmedOrders.js",
+    "emails": "./routes/emails.js",
+    "admin": "./routes/admin.js"
+  }
+}
