@@ -1,0 +1,209 @@
+@import "reset";
+
+html {
+  min-width: 1200px;
+
+  a {
+    cursor: pointer;
+  }
+}
+
+.content-container {
+  font-size:0px;
+
+  &__left-part {
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    border-top: 30px solid #80808061;
+    border-bottom: 150px solid #80808061;
+    padding-bottom: 50px;
+
+    &__sort-filters-container {
+      width:90%;
+      margin: 0 auto;
+
+      &__form {
+        margin-top: 30px;
+        font-family: arial;
+        font-size: 14px;
+
+        input {
+          margin-left: 0px;
+        }
+
+        input[type="radio"] {
+          width: 1.3em;
+          height: 1.3em;
+          border-radius: 50%;
+          vertical-align: middle;
+          margin: 2px 0px;
+          outline: none;
+          cursor: pointer;
+        }
+
+        input[type="text"] {
+          margin: 0px 0px 10px 10px;
+        }
+
+        &__h2 {
+          font-weight: bold;
+          margin-bottom: 15px;
+        }
+
+        p {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  &__right-part {
+    width: 80%;
+    display: inline-block;
+    vertical-align: top;
+    font-family: arial;
+
+    &__p {
+      width:50%;
+      font-size: 24px;
+      display: block;
+      margin: 20px auto;
+    }
+
+    &__orders {
+
+      &__order {
+
+        &__choose-button {
+          margin: 20px auto 0px;
+          display: block;
+          padding:13px 0px;
+          margin-top: 20px;
+          width:90%;
+          font-size: 20px;
+          background-color: #ffa500;
+          color: white;
+          text-align: center;
+          text-transform: uppercase;
+        }
+
+        .flight-box-without-logo {
+          border-top: 3px solid #1c8cdccf;
+        }
+
+        &__flight-box {
+          width:90%;
+          margin: 20px auto 0px;
+
+          &__flight-title {
+            height:50px;
+            background-color: #1c8cdccf;
+            font-size: 14px;
+            color:white;
+
+            img {
+              margin: 5px 0px 5px 20px;
+              height: 40px;
+            }
+
+            &__price-box {
+              float: right;
+              margin: 5px 20px 5px 0px;
+              text-align: right;
+
+              span {
+                font-size: 26px;
+              }
+
+              &__price-text {
+
+
+              }
+            }
+          }
+
+          &__flight-route {
+            font-size: 20px;
+            margin: 20px 0px 0px 40px;
+
+            &__p {
+
+              &__departure-airport-code, &__arrival-airport-code {
+                color: #1c8cdccf;
+              }
+            }
+          }
+
+          &__flight-time {
+            font-size: 20px;
+            margin: 20px 0px 0px 40px;
+
+            &__p {
+
+              &__departure-time {
+                margin-right: 5px;
+              }
+
+              &__arrival-time {
+                margin-left: 5px;
+              }
+
+              &__departure-date, &__arrival-date {
+                color: #1c8cdccf;
+              }
+
+              &__route-overall-time {
+                display: inline-block;
+                vertical-align: top;
+                width: 50%;
+                text-align: center;
+              }
+            }
+          }
+
+          &__grey-line {
+            position: relative;
+            display:block;
+            vertical-align: top;
+            width:82%;
+            height:2px;
+            background-color: #68697f;
+            margin: 20px auto 0px;
+            text-align: center;
+
+            &__transfer-text {
+              display: inline-block;
+              position: relative;
+              color:#ffa500;
+              font-size: 20px;
+              background-color: white;
+              padding:0px 12px;
+              top:-11px;
+            }
+
+            .no-transfer {
+              display: none;
+            }
+          }
+
+          &__airline-info {
+            margin: 20px 0px 0px 40px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    &__load-more-button {
+      display: block;
+      margin: 20px auto;
+      background-color: #80808040;
+      font-size: 20px;
+      color: black;
+      width: 27%;
+      text-align: center;
+      padding: 7px;
+    }
+  }
+}
