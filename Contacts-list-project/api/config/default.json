@@ -1,0 +1,10 @@
+{
+  "database": {
+    "contactsList": "./database/contactsList.json",
+    "foundContacts": "./database/foundContacts.json"
+  },
+
+  "routes": {
+    "contactsList": "./routes/contactsList.js"
+  }
+}

@@ -1,0 +1,431 @@
+@import "reset";
+
+@font-face {
+    font-family: "Centure_Gothic_bold";
+    src: url("../fonts/centure.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Century_Gothic_Regular";
+    src: url("../fonts/CenturyGothicRegular.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Century_Gothic_Italic";
+    src: url("../fonts/CenturyGothicitalic.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+html {
+  min-width: 900px;
+}
+
+a {
+  text-decoration: none;
+  color:black;
+}
+
+body {
+  font-family: "Century_Gothic_Regular";
+}
+
+input[type="button"], button, .content-container__inside-container__toListLink {
+  padding: 7px 10px;
+  background-color: #7d7474;
+  border: 1px solid #6d6262;
+  border-radius: 4px;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Centure_Gothic_bold";
+  letter-spacing: 0.6px;
+  cursor: pointer;
+}
+
+input[type="button"]:disabled , button:disabled, .content-container__inside-container__toListLink:disabled{
+  opacity:.3;
+  cursor: default;
+}
+
+input[type="button"]:hover , button:hover, .content-container__inside-container__toListLink:hover{
+  background-color: #7d7474b0;
+}
+
+.content-container {
+
+  .error404 {
+    font-size: 128px;
+    font-family: "Centure_Gothic_bold";
+    width:30%;
+    margin: 10% auto;
+    text-align: center;
+    letter-spacing: 10px;
+
+    p {
+      font-size: 26px;
+      letter-spacing: 2px;
+    }
+  }
+
+  .popup-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+
+    .popup {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background: #fff;
+      width: 400px;
+      padding: 25px;
+      transition: 0.5s all;
+
+      .close-popup {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+
+      label {
+          font-size: 14px;
+          text-transform: uppercase;
+          font-weight: 500;
+          margin-bottom: 5px;
+      }
+
+      input {
+          width: 100%;
+          display: flex;
+          flex-direction: column-reverse;
+          height: 45px;
+          font-size: 18px;
+          border: none;
+          outline: none;
+          border-bottom: 1px solid #cfd0d3;
+      }
+
+      input:focus {
+          border-bottom: 1px solid #2982ff;
+      }
+
+      h2 {
+        margin-top: 5px;
+        margin-bottom: 25px;
+        color:red;
+      }
+
+      button {
+        width:80%;
+        margin:0 auto;
+        display: block;
+        padding: 15px 10px;
+        background-color: #7d7474;
+        border: 1px solid #6d6262;
+        border-radius: 4px;
+        color: white;
+        text-transform: uppercase;
+        font-family: "Centure_Gothic_bold";
+        letter-spacing: 0.6px;
+        cursor: pointer;
+        transition: 0.5s all;
+      }
+
+      button:hover {
+        background-color: #7d7474b0;
+        transition: 0.5s all;
+      }
+
+      button:disabled {
+        opacity:.3;
+        cursor: default;
+        transition: 0.5s all;
+      }
+
+      .actionInfoField, .error {
+        font-size: 14px;
+        color:red;
+      }
+      .submitActionInfo  {
+        height:20px;
+        margin-top: 15px;
+
+        h2 {
+          font-size: 14px;
+          color:green;
+          text-align: center;
+        }
+      }
+    }
+
+    .popup.active {
+      transform: translate(-50%, -50%) scale(1);
+      transition: 0.5s all;
+    }
+  }
+
+  .popup-bg.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+  }
+
+  &__inside-container {
+    width:90%;
+    margin: 0 auto;
+    padding: 0 0 50px;
+    text-align: center;
+    font-size: 0;
+
+    &__toListLink {
+      margin-top: 20px;
+      font-size: 20px;
+      padding: 7px 10px;
+      border: 1px solid black;
+      display: block;
+      width:125px;
+      margin-bottom: 30px;
+      cursor:pointer;
+    }
+
+    .formInfoH2 {
+      font-size: 18px;
+      height:10px;
+      color: green;
+      margin: 7px 0;
+      text-align: left;
+    }
+
+    h1 {
+      font-family: "Centure_Gothic_bold";
+      font-size: 24px;
+      text-align: left;
+      margin-bottom: 50px;
+    }
+
+    .telDataActionInfo {
+      height:15px;
+      font-size: 14px;
+      color:red;
+    }
+
+    &__buttons-next-prev {
+      margin-top: 50px;
+
+      a {
+        padding:5px 10px;
+        border: 1px solid black;
+      }
+
+      .activeNavigationButton {
+        background-color: #615a5a!important;
+        text-decoration: underline;
+      }
+
+      .navigationButton {
+        padding: 7px 10px;
+        background-color: #7d7474;
+        border: 1px solid #6d6262;
+        border-radius: 4px;
+        color: white;
+        text-transform: uppercase;
+        font-family: "Centure_Gothic_bold";
+        letter-spacing: 0.6px;
+        cursor: pointer;
+      }
+
+      .navigationButton:hover {
+        background-color: #7d7474b0;
+      }
+
+      .disabled {
+        opacity:.3;
+        cursor: default;
+      }
+
+      input {
+        margin-right: 15px;
+      }
+
+      a {
+        font-size: 14px;
+        margin-right: 15px;
+      }
+    }
+
+    &__addEditContactInfoForm {
+      font-size: 0;
+      text-align: left;
+      width:80%;
+      margin: 0 auto;
+
+      label {
+        text-align: left;
+        display: inline-block;
+        vertical-align: top;
+        width:50%;
+        font-size: 16px;
+      }
+
+      .actionSearchErrorInfo {
+        font-size: 16px;
+        text-align: center;
+        color: red;
+      }
+
+      .contactsTelDataH2 {
+        font-size: 24px;
+        text-align: left;
+        margin: 40px 0 25px;
+      }
+
+      h3 {
+        text-align: left;
+        width:100%;
+        font-size: 16px;
+        width:50%;
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: 20px;
+      }
+
+      .actionInfoContainer {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 10px;
+        height:15px;
+
+        .actionInfo {
+          text-align: center;
+          color: green;
+        }
+
+        .actionInfoError {
+          text-align: center;
+          color: red;
+        }
+      }
+
+      input[type="text"] {
+        text-align: left;
+        display: inline-block;
+        vertical-align: top;
+        width:48%;
+      }
+
+      input[type="radio"] {
+        text-align: right;
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .formInfoH2 {
+        font-size: 12px;
+        height:10px;
+        color: red;
+        margin: 7px 0;
+        text-align: right;
+      }
+
+      .labelInitialWidth {
+        width:initial;
+      }
+
+      .firstLabel {
+        margin-right: 50px;
+      }
+
+      &__submitButton {
+        width:25%;
+        margin: 50px auto 20px;
+        padding: 10px 0px;
+        display: block;
+      }
+
+      .birthDateLowTopH3 {
+        width:50%;
+        font-size: 16px;
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .birthDateLowTopLabel {
+        width: 5%;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 2px;
+      }
+
+      #birthDateLow, #birthDateTop {
+        width:17%;
+      }
+
+      #birthDateLow {
+        margin-right: 20px;
+      }
+    }
+
+    &__table-container {
+    width:100%;
+
+    &__telefonActionsButtons {
+      text-align: right;
+
+
+        td {
+          text-align: right!important;
+          input {
+            margin-right: 20px;
+          }
+      }
+    }
+
+    .first-line {
+      border-bottom: 1px solid grey;
+      background-color: #8e8383a6;
+      font-family: "Century_Gothic_Italic";
+    }
+
+    tr {
+      width:100%;
+
+      td {
+        padding:20px 10px;
+        font-size: 16px;
+        text-align: center;
+        vertical-align: middle;
+
+        .formInfoH2 {
+          color:green;
+          }
+
+        input[type="checkbox"] {
+          width: 18px;
+          height: 18px
+          }
+        }
+
+        .buttonsTd {
+          text-align: right;
+
+          input {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
